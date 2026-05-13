@@ -3,7 +3,7 @@
   "years": [
     { "year": 1975, "contributions": [] },
     { "year": 1976, "contributions": [{ "date": "2026-01-01", "amount": 0 }, { "date": "2026-05-13", "amount": 2600 }]},
-    { "year": 1977, "contributions": [] },
+    { "year": 1977, "contributions": [{ "date": "2026-05-13", "amount": 1200 }] },
     { "year": 1978, "contributions": [] },
     { "year": 1979, "contributions": [{ "date": "2026-01-01", "amount": 1500 }] },
     { "year": 1980, "contributions": [{ "date": "2026-01-01", "amount": 3000 }] },
