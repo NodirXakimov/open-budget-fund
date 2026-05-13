@@ -1,55 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Open Budget Fund</title>
+  <title>Open Budjet Jamg'armasi</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Open Budget Fund</h1>
-    <p class="subtitle">Yearly collection progress — target: 3,000,000 UZS per year</p>
+    <h1>Open Budjet Jamg'armasi</h1>
+    <p class="subtitle">Yig'im jarayoni — maqsad: har bir yil uchun 3 000 000 so'm</p>
+
     <div class="total-box">
-      <span class="total-label">Total collected</span>
+      <span class="total-label">Jami yig'ilgan</span>
       <span class="total-amount" id="total"></span>
     </div>
+
     <div id="bars"></div>
+
     <div class="legend">
-      <span class="legend-item"><span class="dot full"></span> 100%</span>
-      <span class="legend-item"><span class="dot partial"></span> Partial</span>
-      <span class="legend-item"><span class="dot zero"></span> 0%</span>
+      <span class="legend-item"><span class="dot full"></span> To'liq</span>
+      <span class="legend-item"><span class="dot partial"></span> Qisman</span>
+      <span class="legend-item"><span class="dot zero"></span> Yo'q</span>
+      <span class="legend-item"><span class="dot new"></span> Yangi qo'shilgan</span>
     </div>
   </div>
-  <script>
-    const TARGET = 3000;
 
+  <script>
     fetch('data.json')
       .then(r => r.json())
-      .then(data => {
-        const container = document.getElementById('bars');
-        const total = data.reduce((sum, item) => sum + item.amount, 0);
-        document.getElementById('total').textContent = (total * 1000).toLocaleString() + ' UZS';
+      .then(db => {
+        const TARGET = db.target;
+        const years = db.years;
 
-        data.forEach(item => {
-          const pct = Math.min(Math.round((item.amount / TARGET) * 100), 100);
-          const actual = (item.amount * 1000).toLocaleString();
+        let latestDate = null;
+        for (const y of years) {
+          for (const c of y.contributions) {
+            if (!latestDate || c.date > latestDate) latestDate = c.date;
+          }
+        }
+
+        const container = document.getElementById('bars');
+        const total = years.reduce((s, y) =>
+          s + y.contributions.reduce((a, c) => a + c.amount, 0), 0);
+        document.getElementById('total').textContent =
+          (total * 1000).toLocaleString('ru-RU') + ' so\'m' + '';
+
+        years.forEach(y => {
+          const amount = y.contributions.reduce((a, c) => a + c.amount, 0);
+          const newlyAdded = latestDate
+            ? y.contributions
+                .filter(c => c.date === latestDate)
+                .reduce((a, c) => a + c.amount, 0)
+            : 0;
+          const pct = Math.min(Math.round((amount / TARGET) * 100), 100);
+          const actual = (amount * 1000).toLocaleString('ru-RU');
 
           const row = document.createElement('div');
-          row.className = 'row';
+          row.className = 'row' + (newlyAdded > 0 ? ' has-new' : '');
 
           let barClass = 'bar-fill';
           if (pct === 100) barClass += ' full';
           else if (pct === 0) barClass += ' zero';
           else if (pct < 50) barClass += ' low';
 
+          const newTag = newlyAdded > 0
+            ? `<span class="new-tag">+${(newlyAdded * 1000).toLocaleString('ru-RU')} so'm</span>`
+            : '';
+
           row.innerHTML = `
-            <span class="year">${item.year}</span>
+            <span class="year">${y.year}</span>
             <div class="bar-track">
               <div class="${barClass}" style="width: ${pct}%"></div>
             </div>
             <span class="pct">${pct}%</span>
-            <span class="amount">${actual} UZS</span>
+            <span class="new-cell">${newTag}</span>
+            <span class="amount">${actual} so'm</span>
           `;
           container.appendChild(row);
         });

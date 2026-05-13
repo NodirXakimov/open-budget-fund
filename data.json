@@ -1,126 +1,36 @@
-[
-  {
-    "year": 1975,
-    "amount": 0
-  },
-  {
-    "year": 1976,
-    "amount": 0
-  },
-  {
-    "year": 1977,
-    "amount": 0
-  },
-  {
-    "year": 1978,
-    "amount": 0
-  },
-  {
-    "year": 1979,
-    "amount": 1500
-  },
-  {
-    "year": 1980,
-    "amount": 3000
-  },
-  {
-    "year": 1981,
-    "amount": 500
-  },
-  {
-    "year": 1982,
-    "amount": 0
-  },
-  {
-    "year": 1983,
-    "amount": 2460
-  },
-  {
-    "year": 1984,
-    "amount": 3000
-  },
-  {
-    "year": 1985,
-    "amount": 1700
-  },
-  {
-    "year": 1986,
-    "amount": 2860
-  },
-  {
-    "year": 1987,
-    "amount": 2000
-  },
-  {
-    "year": 1988,
-    "amount": 2700
-  },
-  {
-    "year": 1989,
-    "amount": 3000
-  },
-  {
-    "year": 1990,
-    "amount": 3000
-  },
-  {
-    "year": 1991,
-    "amount": 2500
-  },
-  {
-    "year": 1992,
-    "amount": 2550
-  },
-  {
-    "year": 1993,
-    "amount": 3000
-  },
-  {
-    "year": 1994,
-    "amount": 3000
-  },
-  {
-    "year": 1995,
-    "amount": 3000
-  },
-  {
-    "year": 1996,
-    "amount": 3000
-  },
-  {
-    "year": 1997,
-    "amount": 2550
-  },
-  {
-    "year": 1998,
-    "amount": 1900
-  },
-  {
-    "year": 1999,
-    "amount": 1500
-  },
-  {
-    "year": 2000,
-    "amount": 3000
-  },
-  {
-    "year": 2001,
-    "amount": 2260
-  },
-  {
-    "year": 2002,
-    "amount": 520
-  },
-  {
-    "year": 2003,
-    "amount": 2560
-  },
-  {
-    "year": 2004,
-    "amount": 2370
-  },
-  {
-    "year": 2005,
-    "amount": 1730
-  }
-]
+{
+  "target": 3000,
+  "years": [
+    { "year": 1975, "contributions": [] },
+    { "year": 1976, "contributions": [{ "date": "2026-01-01", "amount": 0 }, { "date": "2026-05-13", "amount": 2600 }]},
+    { "year": 1977, "contributions": [] },
+    { "year": 1978, "contributions": [] },
+    { "year": 1979, "contributions": [{ "date": "2026-01-01", "amount": 1500 }] },
+    { "year": 1980, "contributions": [{ "date": "2026-01-01", "amount": 3000 }] },
+    { "year": 1981, "contributions": [{ "date": "2026-01-01", "amount": 500 }] },
+    { "year": 1982, "contributions": [{ "date": "2026-05-13", "amount": 400 }] },
+    { "year": 1983, "contributions": [{ "date": "2026-01-01", "amount": 2460 }, { "date": "2026-05-13", "amount": 130 }] },
+    { "year": 1984, "contributions": [{ "date": "2026-01-01", "amount": 3000 }] },
+    { "year": 1985, "contributions": [{ "date": "2026-01-01", "amount": 1700 }] },
+    { "year": 1986, "contributions": [{ "date": "2026-01-01", "amount": 2860 }] },
+    { "year": 1987, "contributions": [{ "date": "2026-01-01", "amount": 2000 }] },
+    { "year": 1988, "contributions": [{ "date": "2026-01-01", "amount": 2700 }] },
+    { "year": 1989, "contributions": [{ "date": "2026-01-01", "amount": 3000 }] },
+    { "year": 1990, "contributions": [{ "date": "2026-01-01", "amount": 3000 }] },
+    { "year": 1991, "contributions": [{ "date": "2026-01-01", "amount": 2500 }] },
+    { "year": 1992, "contributions": [{ "date": "2026-01-01", "amount": 2550 }] },
+    { "year": 1993, "contributions": [{ "date": "2026-01-01", "amount": 3000 }] },
+    { "year": 1994, "contributions": [{ "date": "2026-01-01", "amount": 3000 }] },
+    { "year": 1995, "contributions": [{ "date": "2026-01-01", "amount": 3000 }] },
+    { "year": 1996, "contributions": [{ "date": "2026-01-01", "amount": 3000 }] },
+    { "year": 1997, "contributions": [{ "date": "2026-01-01", "amount": 2550 }] },
+    { "year": 1998, "contributions": [{ "date": "2026-01-01", "amount": 1900 }] },
+    { "year": 1999, "contributions": [{ "date": "2026-01-01", "amount": 1500 }] },
+    { "year": 2000, "contributions": [{ "date": "2026-01-01", "amount": 3000 }] },
+    { "year": 2001, "contributions": [{ "date": "2026-01-01", "amount": 2260 }] },
+    { "year": 2002, "contributions": [{ "date": "2026-01-01", "amount": 520 }] },
+    { "year": 2003, "contributions": [{ "date": "2026-01-01", "amount": 2560 }, { "date": "2026-05-13", "amount": 60 }] },
+    { "year": 2004, "contributions": [{ "date": "2026-01-01", "amount": 2370 }] },
+    { "year": 2005, "contributions": [{ "date": "2026-01-01", "amount": 1730 }] }
+  ]
+}

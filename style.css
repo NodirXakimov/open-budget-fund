@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
@@ -25,7 +25,7 @@ h1 {
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #64748b;
   margin-bottom: 15px;
 }
@@ -43,7 +43,7 @@ h1 {
 }
 
 .total-label {
-  font-size: 1.2rem;
+  font-size: 1.27rem;
   color: #516278;
 }
 
@@ -62,10 +62,28 @@ h1 {
   margin-bottom: 8px;
 }
 
+.new-cell {
+  width: 160px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.new-tag {
+  display: inline-block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #fff;
+  background: #16a34a;
+  padding: 4px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
 .year {
   font-size: 1.3rem;
   font-weight: 600;
-  width: 60px;
+  width: 50px;
   flex-shrink: 0;
   text-align: right;
   font-variant-numeric: tabular-nums;
@@ -112,7 +130,7 @@ h1 {
 .amount {
   font-size: 1.28rem;
   font-weight: 600;
-  width: 185px;
+  width: 160px;
   flex-shrink: 0;
   text-align: right;
   color: #1e293b;
@@ -152,6 +170,10 @@ h1 {
 .dot.zero {
   background: #e2e8f0;
   border: 2px solid #cbd5e1;
+}
+
+.dot.new {
+  background: #16a34a;
 }
 
 /* Responsive */
