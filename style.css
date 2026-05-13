@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+/* Total */
+.total-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 15px;
+  padding: 10px 13px;
+  background: #e2e8f0;
+  border-radius: 10px;
+}
+
+.total-label {
+  font-size: 1.2rem;
+  color: #516278;
+}
+
+.total-amount {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0f172a;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Each row */
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.year {
+  font-size: 1.3rem;
+  font-weight: 600;
+  width: 60px;
+  flex-shrink: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.bar-track {
+  flex: 1;
+  height: 36px;
+  background: #e2e8f0;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  transition: width 0.6s ease;
+  min-width: 0;
+}
+
+.bar-fill.full {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.bar-fill.low {
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+}
+
+.bar-fill.zero {
+  width: 0 !important;
+}
+
+.pct {
+  font-size: 1.18rem;
+  font-weight: 700;
+  width: 55px;
+  flex-shrink: 0;
+  text-align: right;
+  color: #334155;
+}
+
+.amount {
+  font-size: 1.28rem;
+  font-weight: 600;
+  width: 185px;
+  flex-shrink: 0;
+  text-align: right;
+  color: #1e293b;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Legend */
+.legend {
+  margin-top: 30px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+.dot.full {
+  background: #22c55e;
+}
+
+.dot.partial {
+  background: #6366f1;
+}
+
+.dot.zero {
+  background: #e2e8f0;
+  border: 2px solid #cbd5e1;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+
+  .row { gap: 10px; }
+
+  .year { font-size: 1.1rem; width: 48px; }
+
+  .bar-track { height: 26px; }
+
+  .amount { font-size: 0.85rem; width: 130px; }
+}
