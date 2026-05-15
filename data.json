@@ -31,6 +31,6 @@
     { "year": 2002, "contributions": [{ "date": "2026-01-01", "amount": 520 }] },
     { "year": 2003, "contributions": [{ "date": "2026-01-01", "amount": 2560 }, { "date": "2026-05-13", "amount": 60 }] },
     { "year": 2004, "contributions": [{ "date": "2026-01-01", "amount": 2370 }] },
-    { "year": 2005, "contributions": [{ "date": "2026-01-01", "amount": 1730 }, { "date": "2026-05-13", "amount": 230 }] }
+    { "year": 2005, "contributions": [{ "date": "2026-01-01", "amount": 1730 }, { "date": "2026-05-13", "amount": 345 }] }
   ]
 }
